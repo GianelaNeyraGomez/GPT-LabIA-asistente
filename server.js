@@ -1,6 +1,18 @@
 const express = require('express');
 const app = express();
+
+// Usa el puerto definido en la variable de entorno o el puerto 3000 por defecto
 const port = process.env.PORT || 3000;
+
+// Ruta de ejemplo
+app.get('/', (req, res) => {
+    res.send('¡Bienvenido al Asistente de Configuración de dispositivos de Red!');
+});
+
+// Inicia el servidor y muestra un mensaje en la consola
+app.listen(port, () => {
+    console.log(Servidor ejecutándose en http://localhost:${port});
+});
 
 app.use(express.json());
 
